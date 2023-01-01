@@ -33,7 +33,7 @@ export const getAllSauce = (req, res, next) => {
 };
 
 /*return of a single sauce (by retrieving verif if the: _id === req.params.id)*/
-export const getSauceUnity = (req, res, next) => {
+export const getOneSauce = (req, res, next) => {
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => res.status(200).json(sauce))
     .catch((error) =>

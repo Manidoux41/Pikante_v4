@@ -3,7 +3,7 @@ import {
   createSauce,
   deleteSauce,
   getAllSauce,
-  getSauceUnity,
+  getOneSauce,
   likeSauces,
   modifSauce,
 } from "../controllers/sauceController.js";
@@ -28,14 +28,13 @@ router.delete("/:id", auth, deleteSauce);
 /**
  * recup of a single sauce item
  */
-router.get("/:id", auth, getSauceUnity);
+router.get("/:id", auth, getOneSauce);
 /**
  *
  * intercept all sauces
  * (/api/sauces) = http://3000/api/sauces
  */
 router.get("/", auth, getAllSauce);
-
 /**
  *
  *like/disliked
